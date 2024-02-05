@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   root "home#index"
 
   # All Routes
-  resources :users, except: [:index, :update, :edit]
+  resource :users, except: [:index, :update, :edit], path: "", path_names: {new: :register, show: :profile}
+  resource :sessions, only: [:new, :create, :destroy],path: "auth", path_names: {new: :login, destroy: :logout}
 end
