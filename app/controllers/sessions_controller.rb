@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
     skip_before_action :authenticated!
-    before_action :redirect_if_authenticated, only: [:new]
+    before_action :redirect_if_authenticated, only: %i[new]
     def new
     end
 
