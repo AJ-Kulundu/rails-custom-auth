@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+/* Base */
+:root {
+    font-family:Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+ /* Components */
+@import "components/nav.css";
+@import "components/form.css";

@@ -11,12 +11,14 @@
   </head>
 
   <body>
-    <%if user_signed_in?%>
-      <%= button_to "Logout",sessions_path,method: :delete, data: {turbo_confirm: "Are you sure you want to logout?" }%>
-    <%else%>
-      <%= link_to "Login",new_sessions_path%>
-      <%= link_to "Sign up",new_users_path%>
-    <%end%>
+    <header class="nav">
+      <%if user_signed_in?%>
+        <%= button_to "Logout",sessions_path,method: :delete, class: "nav-item",data: {turbo_confirm: "Are you sure you want to logout?" }%>
+      <%else%>
+        <%= link_to "Login",new_sessions_path, class: "nav-item"%>
+        <%= link_to "Sign up",new_users_path, class: "nav-item"%>
+      <%end%>
+    </header>
     <div><%=notice%></div>
     <div><%=alert%></div>
     <%= yield %>

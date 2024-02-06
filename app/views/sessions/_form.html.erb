@@ -1,10 +1,13 @@
-<%= form_with url: sessions_path do |f| %>
-
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-
-    <%= f.submit "Log In" %>
+<%= form_with url: sessions_path, class: "form" do |f| %>
+    <div>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    <div>
+    <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    <div>
+    <div>
+        <%= f.submit "Log In" %>
+    <div>
 <%end%>
