@@ -1,0 +1,17 @@
+<%= form_with model: current_user, url: passwords_path, class: "form" do |f| %>
+    <div>
+        <%= f.label :password_challenge %>
+        <%= f.password_field :password_challenge %>
+    <div>
+    <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    <div>
+        <div>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+    <div>
+    <div>
+        <%= f.submit "Update Password" %>
+    <div>
+<%end%>
