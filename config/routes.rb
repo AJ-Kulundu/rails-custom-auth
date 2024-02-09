@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # All Routes
   resource :users, except: %i[index update edit], path: "", path_names: {new: :register, show: :profile}
   resource :sessions, only: %i[new create destroy],path: "auth", path_names: {new: :login, destroy: :logout}
+  resource :password_resets
 end
